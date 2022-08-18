@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicionais</title>
+</head>
+<body>
+    <h1>Sistema de multas</h1>
+    Velocidade: <input type="number" name="velocidade" id="vel">
+    <input type="button" value="Verificar limite de velocidade" onclick="verificar_limite()">
+    <script>
+        function verificar_limite() {
+            vel = window.document.getElementById('vel')
+            velocidade = Number(vel.value)
+            if (velocidade > 60) {
+                window.document.write(`Você está numa velocidade de ${velocidade}, ultrapassando o limite. MULTADO!`)
+            } 
+            else {
+                window.document.write(`Você está numa velocidade de ${velocidade}, dentro do limite. Prossiga em segurança.`)
+            }
+            
+            
+        }
+    </script>
+</body>
+</html>
