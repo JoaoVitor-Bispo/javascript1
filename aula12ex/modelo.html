@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+<body id="cria">
+    <h1>Hora do Dia</h1>
+    <script>
+        var hora_atual = new Date()
+        var hora = hora_atual.getHours()
+        var cor_bg = window.document.getElementById('cria')
+        window.document.write(`Agora são ${hora} horas`)
+        if (hora < 12) {
+            cor_bg.style.background = '#C7B68B'
+        }
+        else if (hora < 18) {
+            cor_bg.style.background = '#AA7A64'
+        }
+        else {
+            cor_bg.style.background = '#4A4B4C'
+        }
+    </script>
+</body>
+</html>
