@@ -6,13 +6,13 @@ var bg = window.document.getElementById('cria')
 horario.innerText = `Agora são ${hora} horas.`
 if (hora < 12) {
     bg.style.background = '#C7B68B'
-    foto.src = 'imagens/dia.jpg'
+    foto.innerHTML = '<img src="imagens/dia.jpg">'
 }
 else if (hora < 18) {
     bg.style.background = '#AA7A64'
-    foto.innerHTML = '<img src="tarde.jpg">'
+    foto.innerHTML = '<img src="imagens/tarde.jpg">'
 }
 else {
     bg.style.background = '#4A4B4C'
-    foto.src = '<img src="noite.jpg">'
+    foto.innerHTML = '<img src="imagens/noite.jpg">'
 }
