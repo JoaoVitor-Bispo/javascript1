@@ -3,7 +3,7 @@ function contagem() {
     var fim = window.document.getElementById('final')
     var passo = window.document.getElementById('pulo')
     var res = window.document.getElementById('res')
-    if (inicio.value.lenght == 0 || fim.value.lenght == 0 || passo.value.lenght == 0) {
+    if (inicio.value.length == 0 || fim.value.length == 0 || passo.value.length == 0) {
         window.alert('[ERRO] Faltam dados!')
     }
     else if (Number(passo.value < 0)) {

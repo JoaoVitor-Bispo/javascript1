@@ -1,7 +1,7 @@
 function gerar() {
     var num1 = window.document.getElementById('numb')
     var tabu = window.document.getElementById('tab')
-    if (num1.lenght == 0) {
+    if (num1.value.length == 0) {
         window.alert('Por favor, digite um número.')
     }
     else {
