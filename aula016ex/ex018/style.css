@@ -18,3 +18,9 @@ footer {
     text-align: center;
     padding: 10px;
 }
+select#ressl {
+    width: 150px;
+}
+input#fim {
+    margin-top: 5px;
+}
