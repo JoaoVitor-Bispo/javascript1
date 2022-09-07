@@ -55,6 +55,8 @@ function adicionar() {
                 result.appendChild(elemento)
             }
         }
+        n1.value = ''
+        n1.focus()
 }
 
 
