@@ -1,6 +1,6 @@
 const prompt = require("prompt-sync")();
 
-var tabuada = prompt('Digite um número para a tabuada: ')
+var tabuada = 5
 for (var c = 0; c < 11; c++) {
     console.log(`${c} x ${tabuada} = ${c * tabuada}`)
 }
