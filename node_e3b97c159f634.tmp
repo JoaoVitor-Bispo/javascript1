@@ -1,5 +1,0 @@
-const prompt = require("prompt-sync")();
-
-for (var c = 0;c < 6; c++) {
-    var num = prompt(`Digite o ${c}° número`)
-}
