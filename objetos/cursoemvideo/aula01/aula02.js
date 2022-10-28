@@ -1,18 +1,14 @@
-class caneta {
-    constructor(cor, modelo, ponta, tampada) {
+class Caneta {
+    constructor(cor, modelo, ponta, carga) {
         this.cor = cor
-        this.modelo = modelo
-        this.ponta = ponta
-        this.tampada = tampada
+        this._modelo = modelo
+        this._ponta = ponta
+        this._carga = carga
     }
 }
-var c1 = new caneta('vermelho', 'bic', 0.5, false)
-console.log(c1.cor)
-c1.cor = 'azul'
-console.log(c1.cor)
 
+var c1 = new Caneta('Vermelho', 'maped', '0.5', '90')
+console.log(c1)
 
-
-
-c2 = new caneta('azul', 'maped', 1.0, true)
+var c2 = new Caneta()
 console.log(c2)
