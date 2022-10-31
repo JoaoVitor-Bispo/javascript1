@@ -1,4 +1,5 @@
 class Pessoa {
+    static formaçao
     constructor(nome, idade, altura, peso) {
         this._nome = nome
         this._idade = idade
