@@ -107,7 +107,6 @@ var people1 = new Account(undefined, undefined, undefined, 0, false);
 people1.openAccount('cp')
 people1.setOwner = 'Jaozada'
 console.log(people1)
-console.log(people1.getType)
 
 var people2 = new Account(undefined, undefined, undefined, 0, false);
 people2.openAccount('cc')
