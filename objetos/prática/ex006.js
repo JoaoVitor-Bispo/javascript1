@@ -35,15 +35,16 @@ class Account {
         this._status = newStatus
     }
 
-    openAccount() {
+    openAccount(t) {
         if (!this._status) {
             console.log('Opening Account...');
             this._status = true;
+            this.setType = t
             if (this.#type == 'cc') {
-                this._sale = 50;
+                this._sale += 50;
             }
             else if (this.#type == 'cp') {
-                this._sale = 150;
+                this._sale += 150;
             }
         }
         else {
@@ -84,15 +85,34 @@ class Account {
             console.log('You need to open an account for pay the monthly payment.')
         }
     }
+    closeAccount() {
+        if(this._status) {
+            if(this._sale == 0) {
+                this._status = false
+                this._owner = undefined
+            }
+            else {
+                console.log('Your sale needs to be 0 for close the account')
+            }
+        }
+        else {
+            console.log('You need to open an account for to close the account.')
+
+        }
+    }
+
 }
 
-var people1 = new Account(undefined, undefined, 'Jubileu', 0, false);
+var people1 = new Account(undefined, undefined, undefined, 0, false);
+people1.openAccount('cp')
+people1.setOwner = 'Jaozada'
+console.log(people1)
+console.log(people1.getType)
 
-people1.setType = 'cp';
-people1.openAccount();
-console.log(people1);
-people1.setOwner = 'jaozada';
-console.log(people1);
+var people2 = new Account(undefined, undefined, undefined, 0, false);
+people2.openAccount('cc')
+people2.setOwner = 'Maria'
+console.log(people2)
 
 
 
