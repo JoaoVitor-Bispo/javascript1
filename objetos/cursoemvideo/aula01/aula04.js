@@ -57,3 +57,4 @@ console.log(c3.classificaIMC())
 console.log(Pessoa.total_pessoas)
 
 
+
