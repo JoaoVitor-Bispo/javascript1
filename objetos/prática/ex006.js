@@ -92,7 +92,7 @@ class Account {
                 this._owner = undefined
             }
             else {
-                console.log('Your sale needs to be 0 for close the account')
+                console.log('Your sale needs to be 0 for to close the account')
             }
         }
         else {
