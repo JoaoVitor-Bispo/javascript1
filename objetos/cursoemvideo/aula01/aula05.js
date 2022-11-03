@@ -44,3 +44,6 @@ console.log(c2)
 var c1 = new canetaColore(3)
 console.log(c1.rabiscar())
 console.log(c1)
+
+var c3 = new Caneta(2, false)
+console.log(c3)
