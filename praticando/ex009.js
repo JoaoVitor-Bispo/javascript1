@@ -1,7 +1,10 @@
-function soma(a=0,b=0) {
-    parseFloat(a)
-    parseFloat(b)
-    console.log(`Um terreno de ${a}x${b} tem `)
-    return a * b
-}
-console.log(soma(5.3,3))
+var objetos = ['celular', 'pente']
+objetos.push('controle')
+objetos.unshift('copo')
+console.log(objetos)
+objetos.shift()
+objetos.pop()
+objetos[2] = 'ventilador'
+objetos.push('cabide')
+objetos.splice(2, 1)
+console.log(objetos)

@@ -4,8 +4,12 @@ function Mostranome() {
 var f = Mostranome
 if (typeof f == 'function') {
     var nome = Mostranome()
+    console.log(nome)
+    console.log('é uma função')
 }
-console.log(nome)
+else {
+    console.log('Não é uma função')
+}
 
 var teste = ['bmw', 'mustang', 'supra']
 teste = new Object
