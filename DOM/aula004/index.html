@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 600px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h3 id="titulo">Este texto tem <i><u>importância</u></i></h3>
+
+    <h1 class="title1">Título da notícia <strong>um</strong></h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam possimus sed sequi! Harum aspernatur, modi impedit quisquam id facilis quibusdam porro optio molestiae! Cum aliquid ullam, nisi vel animi iure! Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat enim ipsum ea quidem veritatis aut laboriosam rerum magni, aliquam dolorem tempore quam voluptates ad pariatur fuga provident assumenda dolorum commodi?</p>
+
+    <h2>Título da notícia 2</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis deleniti, vitae ipsum, quis laborum est dolorum amet doloremque vel optio praesentium harum culpa dignissimos fugit maxime? Consectetur at temporibus animi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat enim ipsum ea quidem veritatis aut laboriosam rerum magni, aliquam dolorem tempore quam voluptates ad pariatur fuga provident assumenda dolorum commodi?</p>
+
+    <img src="noticia.png" alt="Teste">
+
+    <script>
+        let elemento = document.querySelector('h3 > i > u');
+        elemento.style.color = 'red'
+
+        let titulo1 = document.querySelector('.title1')
+        titulo1.innerHTML = '<u>Novo Título</u>'
+        console.log(titulo1.outerHTML)
+
+        let imagem = document.querySelector('img')
+        imagem.src = 'imagem2.png'
+        console.log(imagem)
+
+        // document.querySelector('#titulo').innerHTML = imagem.alt
+    </script>
+</body>
+</html>
