@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.noticia {
+            font-family: Arial, Helvetica, sans-serif;
+            width: 400px;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 1px 1px 5px black;
+            margin: 50px;
+
+        }
+        img {
+            height: 130px;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="noticia">
+        <h1>Título da notícia</h1>
+        
+        <h3 id="sumario">Sumário da notícia</h3>
+        <img src="images.png" alt="Imagem da notícia">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere molestiae, temporibus ipsa, adipisci eaque aliquid fugit aut minima harum explicabo illo dolor ducimus architecto ut et omnis reprehenderit, est optio. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam debitis architecto magnam provident, facilis expedita eos nobis dolorum ab consequuntur ipsa consectetur totam deserunt modi veritatis dicta non quis. Expedita?</p>
+    </div>
+
+    <script>
+        var elemento = document.querySelector('#sumario');
+        // hasAttribute
+        if (elemento.hasAttribute('id')) {
+            console.log('Tem um ID');
+        }
+        // getAttribute
+        console.log(elemento.getAttribute('id'));
+
+        // setAttribute
+        elemento.setAttribute('title', 'Título da notícia');
+
+        // removeAttribute
+        let imagem = document.querySelector('img');
+        console.log(imagem);
+        imagem.removeAttribute('src');
+
+        console.log(elemento.attributes[0])
+    </script>
+</body>
+</html>

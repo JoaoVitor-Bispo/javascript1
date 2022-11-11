@@ -21,7 +21,7 @@
     <h2>Título da notícia 2</h2>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis deleniti, vitae ipsum, quis laborum est dolorum amet doloremque vel optio praesentium harum culpa dignissimos fugit maxime? Consectetur at temporibus animi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat enim ipsum ea quidem veritatis aut laboriosam rerum magni, aliquam dolorem tempore quam voluptates ad pariatur fuga provident assumenda dolorum commodi?</p>
 
-    <img src="noticia.png" alt="Teste">
+    <img src="noticia.png" alt="Teste" onclick="console.log('teste')">
 
     <script>
         let elemento = document.querySelector('h3 > i > u');
@@ -34,8 +34,14 @@
         let imagem = document.querySelector('img')
         imagem.src = 'imagem2.png'
         console.log(imagem)
-
         // document.querySelector('#titulo').innerHTML = imagem.alt
+
+        function executar() {
+            let elemento = document.querySelector('#titulo')
+            elemento.innerText = 'Função executada'
+            elemento.style.color = 'blue'
+        }
+
     </script>
 </body>
 </html>
