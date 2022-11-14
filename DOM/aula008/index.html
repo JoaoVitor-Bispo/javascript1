@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .conteiner {
+            padding: 20px;
+            margin: 20px;
+            border: 1px solid black;
+        }
+        p {
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="conteiner">Dentro da DIV</div>
+
+    <script>
+        let div = document.querySelector('div')
+        // div.insertAdjacentText('beforebegin', 'Parágrafo 1')
+        // div.insertAdjacentText('afterbegin', 'Parágrafo 2')
+        // div.insertAdjacentText('beforeend', 'Parágrafo 3')
+        // div.insertAdjacentText('afterend', 'Parágrafo 4')
+
+        div.insertAdjacentHTML('beforebegin', '<p>Parágrafo 1</p>')
+        div.insertAdjacentHTML('afterbegin', '<p>Parágrafo 2</p>')
+        div.insertAdjacentHTML('beforeend', '<p>Parágrafo 3</p>')
+        div.insertAdjacentHTML('afterend', '<p>Parágrafo 4</p>')
+
+    </script>
+</body>
+</html>

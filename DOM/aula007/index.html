@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .conteiner {
+            padding: 20px;
+            margin: 20px;
+            border: 1px solid black;
+        }
+        p {
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="conteiner">Dentro da DIV</div>
+
+    <script>
+        let p1 = document.createElement('p')
+        let p2 = document.createElement('p')
+        let p3 = document.createElement('p')
+        let p4 = document.createElement('p')
+        p1.innerText = 'Parágrafo 1'
+        p2.innerText = 'Parágrafo 2'
+        p3.innerText = 'Parágrafo 3'
+        p4.innerText = 'Parágrafo 4'
+        
+        let div = document.querySelector('div')
+        div.before(p1)
+        div.prepend(p2)
+        div.append(p3)
+        div.after(p4)
+    </script>
+</body>
+</html>
