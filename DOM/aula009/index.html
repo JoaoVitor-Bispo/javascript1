@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            padding: 20px;
+            margin: 20px;
+            border: 1px solid black
+        }
+    </style>
+</head>
+<body>
+    <div id="conteiner">
+        <p>Parágrafo da DIV</p>
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+    </div>
+
+    <script>
+        let div2 = document.querySelector('#conteiner').cloneNode(true)
+        document.querySelector('#conteiner').after(div2)
+        let elemento = document.createElement('p')
+        elemento.innerHTML = '<strong>Novo parágrafo da DIV2</strong>'
+        div2.appendChild(elemento)
+        // document.querySelectorAll('div > p')[1].innerText = 'Novo parágrafo'
+        document.querySelector('div > ul > li:first-child').remove()
+        // console.log(div2.hasAttribute('id'))
+        // console.log(document.querySelectorAll('div')[1])
+    </script>
+</body>
+</html>

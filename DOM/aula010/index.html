@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .p-1 {
+            background-color: red;
+        }
+        .p-2 {
+            background-color: green;
+        }
+        .espaço {
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <p class="test">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+    <script>
+        let p = document.querySelector('p')
+        // p.className = 'p-1 espaço'
+        // console.log(p.className)
+
+        p.classList.add('p-2', 'espaço')
+        // p.classList.toggle('espaço')
+        // p.classList.remove('p-2')
+        console.log(p.classList)
+
+        if (p.classList.contains('espaço')) {
+            console.log('Tem espaço')
+        }
+        else {
+            console.log('Não tem espaço')
+        }
+    </script>
+</body>
+</html>
