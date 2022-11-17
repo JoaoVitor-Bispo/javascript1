@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            background-color: lightgray;
+            width: 300px;
+            height: 200px;
+            padding: 20px;
+            margin: 50px auto;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium iure sapiente quaerat doloribus quibusdam quis quia repellat, quo nostrum deserunt, ipsam cupiditate, numquam enim accusantium cum nam autem. At, soluta! Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus reiciendis iste error excepturi incidunt ullam quod in quo doloribus. Tenetur quas dicta provident maxime et quam magni inventore deleniti eveniet! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates ipsa, nisi quis dolor fuga sunt delectus alias a nostrum soluta blanditiis deleniti possimus qui corrupti ex harum natus nulla? Porro? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum deserunt nemo cupiditate porro eaque ea nisi placeat repellendus recusandae fugit distinctio velit deleniti tenetur quo, cumque quisquam? Tempora, officia vel? Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur sunt expedita, maiores officia ut doloremque quo debitis dolorem, quae qui et! Dicta in voluptate quasi velit et magnam quo exercitationem.</div>
+
+    <p id="propriedades"></p>
+    <button  onclick="buscar_propriedades()">Executar</button>
+
+    <script>
+        function buscar_propriedades() {
+            let div = document.querySelector('div')
+            let p = document.querySelector('#propriedades')
+            p.innerHTML = 'offsetLeft = ' + div.offsetLeft
+            p.innerHTML += ' → offsetWidth = ' + div.offsetWidth
+            p.innerHTML += ' → offsetHeight = ' + div.offsetHeight
+            p.innerHTML += ' → scrollTop = ' + div.scrollTop
+            p.innerHTML += ' → scrollHeight = ' + div.scrollHeight
+        }
+    </script>
+</body>
+</html>
