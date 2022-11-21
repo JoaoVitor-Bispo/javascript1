@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title1">Title 1</h1>
+    <h1 id="title2">Title 2</h1>
+
+    <button id="add">Add Events</button>
+    <button id="execute">Execute Events</button>
+    <button id="remove">Remove Events</button>
+
+    <script>
+        document.querySelector('#add').addEventListener('click', add_events)
+        document.querySelector('#remove').addEventListener('click', remove_events)
+
+        function add_events() {
+            let ex = document.querySelector('#execute')
+            ex.addEventListener('click', event1)
+            ex.addEventListener('click', event2)
+        }
+
+        function event1() {
+            let time = new Date
+            document.querySelector('#title1').innerHTML = time.getSeconds()
+        }
+
+        function event2() {
+            let time = new Date
+            document.querySelector('#title2').innerHTML = time.getSeconds()
+        }
+
+        function remove_events() {
+            document.querySelector('#execute').removeEventListener('click', event2)
+
+        }
+    </script>
+</body>
+</html>

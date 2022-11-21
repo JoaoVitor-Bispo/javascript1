@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .yellow {
+            background-color: yellow;
+            padding: 3px;
+        }
+        .green {
+            background-color: green;
+            padding: 3px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Title</h1>
+
+    <button>Background yellow</button>
+
+    <script>
+        var button = document.querySelector('button')
+        var h1 = document.querySelector('h1')
+        button.addEventListener('click', change_button)
+        
+        function change_button() {
+            if (!h1.classList.contains('yellow')) {
+                h1.className = 'yellow'
+                button.textContent = 'Background green'
+            }
+            else {
+                h1.className = 'green'
+                button.textContent = 'Background yellow'
+            }
+        }
+    </script>
+</body>
+</html>

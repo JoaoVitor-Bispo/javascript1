@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            margin: 50px;
+        }
+        div {
+            text-align: center;
+
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>
+            Texto principal HTML
+        </h1>
+        <button onclick="alterar_texto()">
+            Clique aqui
+        </button>
+        <p>Também posso clicar aqui</p>
+    </div>
+
+    <script>
+        document.querySelector('p').onclick = ()  =>  {document.querySelector('p').textContent = 'Outra forma de utilizar um evento'}
+        function alterar_texto() {
+            document.querySelector('h1').innerText = 'Texto alterado no evento Onclick'
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            background-color: yellow;
+            padding: 50px;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <p>Este é o meu elemento</p>
+
+    <script>
+        document.querySelector('p').addEventListener('click', () => {console.log('Click')})
+        // document.querySelector('p').addEventListener('mousedown', () => {console.log('Mouse Down')})
+        // document.querySelector('p').addEventListener('mouseup', () => {console.log('Mouse up')})
+        // document.querySelector('p').addEventListener('mouseenter', () => {console.log('Mouse Enter')})
+        document.querySelector('p').addEventListener('mouseleave', () => {console.log('Mouse leave')})
+        // document.querySelector('p').addEventListener('mousemove', () => {console.log('Mouse Move')})
+        document.querySelector('p').addEventListener('dblclick', () => {console.log('Double Click')})
+        document.querySelector('p').addEventListener('contextmenu', () => {console.log("Menu's button right")})
+    </script>
+</body>
+</html>
