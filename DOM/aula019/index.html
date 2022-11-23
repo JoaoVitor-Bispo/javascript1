@@ -15,10 +15,20 @@
     </style>
 </head>
 <body>
-    <div>Este é meu elemento</div>
+    <div>This is my element</div>
 
     <script>
-        document.querySelector('div').addEventListener("mousemove", () => {console.log(event.pageX)})
+        document.querySelector('div').addEventListener("mousemove", () => {
+            if (event.pageX <= 650) {
+            event.target.style.backgroundColor = 'red'
+        }
+        else {
+            event.target.style.backgroundColor = 'yellow'
+        }
+        });
+
+
+
     </script>
 </body>
 </html>
