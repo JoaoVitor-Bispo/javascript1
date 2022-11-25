@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#" method="post" autocomplete="on" name="test">
+        <div>
+            <label for="usuario">User</label>
+            <input type="text" name="user" id="user" value="jaoz" placeholder="Nome" autocomplete="name">
+        </div>
+
+        <div>
+            <label for="senha">Password</label>
+            <input type="password" name="password" id="password" placeholder="senha" autocomplete="current-password">
+        </div>
+
+        <div>
+            <input type="submit" value="Enviar">
+        </div>
+    </form>
+
+    <script>
+        console.log(document.forms[0].user.value)
+        console.log(document.forms.test)
+    </script>
+</body>
+</html>

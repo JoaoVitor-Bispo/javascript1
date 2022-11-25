@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="get">
+        <div>
+            <label for="task">Task</label>
+            <input type="text" name="task" id="task">
+        </div>
+
+        <div>
+            <label for="time">Time of duration</label>
+            <select name="time" id="time">
+                <option value="1">Day 1</option>
+                <option value="2">Day 2</option>
+                <option value="3">Day 3</option>
+                <option value="4">Day 4</option>
+            </select>
+        </div>
+    </form>
+
+    <script>
+        let task = document.querySelector('[name="task"]')
+        let time = document.querySelector('[name="time"')
+
+        task.addEventListener('change', () => {console.log('changed')})
+        task.addEventListener('cut', () => {console.log('cuted')})
+        task.addEventListener('copy,', () => {console.log('copied')})
+        task.addEventListener('paste', () => {console.log('pasted')})
+        task.addEventListener('input', () => {console.log('inputed')})
+
+
+    </script>
+</body>
+</html>
