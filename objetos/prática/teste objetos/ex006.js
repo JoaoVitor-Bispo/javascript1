@@ -7,6 +7,12 @@ class Account {
         this._sale = sale;
         this._status = status
     }
+    get getNumbconta () {
+        return this.numbConta
+    }
+    set setNumbconta (newnum) {
+        this.numbConta = newnum
+    }
     get getType() {
         return this.#type
     }
@@ -35,11 +41,9 @@ class Account {
         this._status = newStatus
     }
 
-    openAccount(t) {
+    openAccount() {
         if (!this._status) {
-            console.log('Opening Account...');
             this._status = true;
-            this.setType = t
             if (this.#type == 'cc') {
                 this._sale += 50;
             }
@@ -103,15 +107,46 @@ class Account {
 
 }
 
-var people1 = new Account(undefined, undefined, undefined, 0, false);
-people1.openAccount('cp')
-people1.setOwner = 'Jaozada'
-console.log(people1)
 
-var people2 = new Account(undefined, undefined, undefined, 0, false);
-people2.openAccount('cc')
-people2.setOwner = 'Maria'
-console.log(people2)
+function account_open() {
+    let owner = document.querySelector('#ownerc').value
+    let num_account = document.querySelector('#numc').value
+    let type_account = document.querySelector('#typec').value
+    if (owner.length == 0 || num_account.length == 0 || type_account.length == 0) {
+        window.alert('Put informations valids in your account')
+    }
+    else {
+        let account =  new Account(num_account, type_account, owner, 0)
+
+        account.openAccount()
+        document.querySelector('#account_op').remove()
+
+        let view_informations = document.createElement('button')
+        document.documentElement.appendChild(view_informations)
+        view_informations.textContent = 'View Informations of account'
+
+        view_informations.addEventListener('click', () => {
+            let sale_children = document.createElement('div')
+            sale_children.innerHTML = `Your sale: ${account.getSale}`
+            view_informations.after(sale_children)
+
+            let type_children = document.createElement('div')
+            type_children.innerHTML = `Type of your account: ${account.getType}`
+            view_informations.after(type_children)
+
+            let num_children = document.createElement('div')
+            num_children.innerHTML = `Number's ID of your account: ${account.getNumbconta}`
+            view_informations.after(num_children)
+
+
+            let owner_children = document.createElement('div')
+            owner_children.innerHTML = `Owner of account: ${account.getOwner}`
+            view_informations.after(owner_children)
+
+        })
+        console.log(account)
+    }
+}
 
 
 
