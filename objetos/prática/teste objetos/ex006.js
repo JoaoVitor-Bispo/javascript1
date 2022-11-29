@@ -5,7 +5,7 @@ class Account {
         this.#type = type
         this._owner = owner;
         this._sale = sale;
-        this._status = status
+        this._status = false
     }
     get getNumbconta () {
         return this.numbConta
@@ -121,7 +121,29 @@ function account_open() {
         account.openAccount()
         document.querySelector('#account_op').remove()
 
-        let view_informations = document.createElement('button')
+        let change_datas = document.createElement('div')
+        document.documentElement.appendChild(change_datas)
+        change_datas.textContent = 'Change Datas'
+        change_datas.onclick = () => {
+            let change_sale = document.createElement('div')
+            change_sale.textContent = 'Change Sale'
+            change_sale.id = 'id_sale'
+            change_datas.after(change_sale)
+            change_sale.addEventListener('click', (e) => {
+                let new_sale = document.createElement('input')
+                let c = 0
+                while(true) {
+                    if (e.target.click) {
+                        change_sale.appendChild(new_sale)
+                        c++
+                        break
+                    }
+                }
+                console.log(c)
+            })
+        }
+
+        let view_informations = document.createElement('div')
         document.documentElement.appendChild(view_informations)
         view_informations.textContent = 'View Informations of account'
 
