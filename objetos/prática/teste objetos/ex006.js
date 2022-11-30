@@ -124,23 +124,63 @@ function account_open() {
         let change_datas = document.createElement('div')
         document.documentElement.appendChild(change_datas)
         change_datas.textContent = 'Change Datas'
+        change_datas.id = 'id_changedatas'
+
+        // Start event change datas
         change_datas.onclick = () => {
             let change_sale = document.createElement('div')
-            change_sale.textContent = 'Change Sale'
-            change_sale.id = 'id_sale'
-            change_datas.after(change_sale)
-            change_sale.addEventListener('click', (e) => {
-                let new_sale = document.createElement('input')
-                let c = 0
-                while(true) {
-                    if (e.target.click) {
-                        change_sale.appendChild(new_sale)
-                        c++
-                        break
+            change_sale.textContent = 'Deposit'
+            if (document.querySelectorAll('.id_changedatas').length > 1) {
+                change_sale.remove()
+            }
+            else {
+                change_datas.after(change_sale)
+                // Start event deposit
+                change_sale.addEventListener('click', () => {
+                    let new_sale = document.createElement('input')
+                    new_sale.className = 'id_newsale'
+                    new_sale.type = 'number'
+                    change_sale.appendChild(new_sale)
+                    if (document.querySelectorAll('.id_newsale').length > 1) {
+                        new_sale.remove()
                     }
-                }
-                console.log(c)
-            })
+                    else {
+                        new_sale.addEventListener('keyup', function(e) {
+                            if (e.code == 'Enter') {
+                                account.deposit(Number(new_sale.value))
+                            }
+                        })
+                    }
+                    // End event deposit    
+                })
+            }
+            let cashout_div = document.createElement('div')
+            cashout_div.textContent = 'Cashout'
+            cashout_div.id = 'id_cashoutdiv'
+            if (document.querySelectorAll('.id_changedatas').length > 1) {
+                cashout_div.remove()
+            }
+            else {
+            // Start Event Cashout
+                change_datas.after(cashout_div)
+                cashout_div.addEventListener('click', function () {
+                    let cashout_input = document.createElement('input')
+                    cashout_input.className = 'id_cashout'
+                    cashout_input.type = 'number'
+                    change_sale.after(cashout_input)
+                    if (document.querySelectorAll('.id_cashout').length > 1) {
+                        cashout_input.remove()
+                    }
+                    else {
+                        cashout_input.addEventListener('keyup', function(e) {
+                            if (e.code == 'Enter') {
+                                account.cashout(Number(cashout_input.value))
+                            }
+                        })
+                    }
+        
+                })
+            }
         }
 
         let view_informations = document.createElement('div')
