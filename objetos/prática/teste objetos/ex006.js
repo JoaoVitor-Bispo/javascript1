@@ -109,6 +109,10 @@ class Account {
 
 
 function account_open() {
+    let iframe = document.createElement('iframe')
+    iframe.href = 'iframe.html'
+    iframe.name = 'frame'
+
     let owner = document.querySelector('#ownerc').value
     let num_account = document.querySelector('#numc').value
     let type_account = document.querySelector('#typec').value
@@ -122,15 +126,16 @@ function account_open() {
         document.querySelector('#account_op').remove()
 
         let change_datas = document.createElement('div')
-        document.documentElement.appendChild(change_datas)
+        iframe.appendChild(change_datas)
         change_datas.textContent = 'Change Datas'
-        change_datas.id = 'id_changedatas'
+        change_datas.className = 'id_changedatas'
 
         // Start event change datas
-        change_datas.onclick = () => {
+        change_datas.addEventListener('click', () => {
             let change_sale = document.createElement('div')
             change_sale.textContent = 'Deposit'
-            if (document.querySelectorAll('.id_changedatas').length > 1) {
+            change_sale.className = 'id_changesale'
+            if (document.querySelectorAll('.id_changesale').length > 0) {
                 change_sale.remove()
             }
             else {
@@ -156,8 +161,8 @@ function account_open() {
             }
             let cashout_div = document.createElement('div')
             cashout_div.textContent = 'Cashout'
-            cashout_div.id = 'id_cashoutdiv'
-            if (document.querySelectorAll('.id_changedatas').length > 1) {
+            cashout_div.className = 'id_cashoutdiv'
+            if (document.querySelectorAll('.id_cashoutdiv').length > 0) {
                 cashout_div.remove()
             }
             else {
@@ -167,7 +172,7 @@ function account_open() {
                     let cashout_input = document.createElement('input')
                     cashout_input.className = 'id_cashout'
                     cashout_input.type = 'number'
-                    change_sale.after(cashout_input)
+                    change_sale.before(cashout_input)
                     if (document.querySelectorAll('.id_cashout').length > 1) {
                         cashout_input.remove()
                     }
@@ -181,27 +186,33 @@ function account_open() {
         
                 })
             }
-        }
+        }) 
 
         let view_informations = document.createElement('div')
-        document.documentElement.appendChild(view_informations)
+        iframe.appendChild(view_informations)
         view_informations.textContent = 'View Informations of account'
 
-        view_informations.addEventListener('click', () => {
             let sale_children = document.createElement('div')
+            let type_children = document.createElement('div')
+            let num_children = document.createElement('div')
+            let owner_children = document.createElement('div')
+
+
+        view_informations.addEventListener('click', () => {
+            sale_children.innerHTML = ''
             sale_children.innerHTML = `Your sale: ${account.getSale}`
             view_informations.after(sale_children)
 
-            let type_children = document.createElement('div')
+            type_children.innerHTML = ''
             type_children.innerHTML = `Type of your account: ${account.getType}`
             view_informations.after(type_children)
 
-            let num_children = document.createElement('div')
+            num_children.innerHTML = ''
             num_children.innerHTML = `Number's ID of your account: ${account.getNumbconta}`
             view_informations.after(num_children)
 
 
-            let owner_children = document.createElement('div')
+            owner_children.innerHTML = ''
             owner_children.innerHTML = `Owner of account: ${account.getOwner}`
             view_informations.after(owner_children)
 

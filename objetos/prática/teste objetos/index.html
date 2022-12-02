@@ -4,26 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
-    <button>Status account</button>
-    <form>
-        <div>
-            <label for="numc">Number's account</label>
-            <input type="text" name="numc" id="numc">
-        </div>
-        <div>
-            <label for="typec">Type account</label>
-            <input type="text" name="typec" id="typec">
-        </div>
-        <div>
-            <label for="ownerc">Owner</label>
-            <input type="text" name="ownerc" id="ownerc">
-        </div>
-        <div><input id="account_op" type="button" value="Open account" onclick="account_open()"></div>
-        <input style="display: none" type="button" value="Sale" id="viewsalec">
-    </form>
+    <main>
+        <h1>Create account in bank</h1>
+        
+        <button class="botao">Status account</button>
+        <form>
+            <div>
+                <label for="numc">Number's account</label>
+                <input type="text" name="numc" id="numc">
+            </div>
+            <div>
+                <label for="typec">Type account</label>
+                <input type="text" name="typec" id="typec">
+            </div>
+            <div>
+                <label for="ownerc">Owner</label>
+                <input type="text" name="ownerc" id="ownerc">
+            </div>
+            <div><input class="botao" id="account_op" type="button" value="Open account" onclick="account_open()" target="frame"></div>
+        </form>
+    </main>
 
     <script src="ex006.js"></script>
 </body>
