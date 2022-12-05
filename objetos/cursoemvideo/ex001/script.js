@@ -1,32 +1,70 @@
-class carro {
+class Carro {
     constructor(nome, portas) {
-        this.nome = nome
-        this.portas = portas
-        this.ligado = false
-        this.velocidade = 0
-        this.cor = undefined
+        this.Nome = nome
+        this.Portas = portas
+        this.Ligado = false
+        this.Cor = undefined
+        this.Blindagem = undefined
+        this.Muniçao = undefined
     }
     ligar() {
-        this.ligado = true
+        this.Ligado = true
     }
     desligar() {
-        this.ligado = false
+        this.Ligado = false
     }
     set setcor(newcor) {
-        this.cor = newcor
+        this.Cor = newcor
     }
 }
-class militar extends carro {
+class Militar extends Carro {
     constructor(nome, portas,blindagem, municao) {
         super(nome, portas)
-        this.blindagem = blindagem
-        this.municao = municao
+        this.Blindagem = blindagem
+        this.Cor = 'verde'
+        this.Muniçao = municao
     }
 }
+let tipo = document.getElementsByName('radiotipo')
+let nome = document.querySelector('#nome')
+let portas = document.querySelector('#portas')
+let blindagem = document.querySelector('#blindagem')
+let muniçao = document.querySelector('#municao')
+let conteiner = document.querySelector('#conteiner')
 
-let c1 = new carro('teste', 4)
-c1.ligar()
-console.log(c1)
+tipo[0].addEventListener('click', () => {
+    blindagem.removeAttribute('disabled')
+    muniçao.removeAttribute('disabled')
+})
 
-let c2 = new militar('teste2', 4,3, 20)
-console.log(c2)
+tipo[1].addEventListener('click', () => {
+    blindagem.value = 0
+    muniçao.value = 0
+    blindagem.setAttribute('disabled', 'disabled')
+    muniçao.setAttribute ('disabled', 'disabled')
+})
+
+
+
+function adicionar() {
+    nome.value = ""
+    portas.value = 0
+    blindagem.value = 0
+    muniçao.value = 0
+    
+    let infos = document.createElement('p')
+    infos.id = 'paragfilho'
+    conteiner.appendChild(infos)
+    if (tipo[1].checked) {
+        let carro = new Carro(nome.value, portas.value)
+        for (var k in carro) {
+            infos.innerHTML += `${k}: ${carro[k]}<br>`
+        }
+    }
+    else if (tipo[0].checked) {
+        let carro = new Militar(nome.value, portas.value, muniçao.value, blindagem.value)
+        for (var k in carro) {
+            infos.innerHTML += `${k}: ${carro[k]}<br>`
+        }
+    }
+}
