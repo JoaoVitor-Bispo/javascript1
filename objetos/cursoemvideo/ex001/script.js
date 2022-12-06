@@ -47,24 +47,31 @@ tipo[1].addEventListener('click', () => {
 
 
 function adicionar() {
-    nome.value = ""
-    portas.value = 0
-    blindagem.value = 0
-    muniçao.value = 0
-    
     let infos = document.createElement('p')
     infos.id = 'paragfilho'
-    conteiner.appendChild(infos)
-    if (tipo[1].checked) {
-        let carro = new Carro(nome.value, portas.value)
-        for (var k in carro) {
-            infos.innerHTML += `${k}: ${carro[k]}<br>`
-        }
+    if (nome.value.length == 0 || portas.value.length == 0) {
+        window.alert('Defina o nome e a quantidade de portas do seu carro corretamente.')
     }
-    else if (tipo[0].checked) {
-        let carro = new Militar(nome.value, portas.value, muniçao.value, blindagem.value)
-        for (var k in carro) {
-            infos.innerHTML += `${k}: ${carro[k]}<br>`
+    else {
+        conteiner.appendChild(infos)
+        if (tipo[1].checked) {
+            let carro = new Carro(nome.value, portas.value)
+            for (var k in carro) {
+                infos.innerHTML += `${k}: ${carro[k]}<br>`
+            }
+        }
+        else if (tipo[0].checked) {
+            let carro = new Militar(nome.value, portas.value, muniçao.value, blindagem.value)
+            for (var k in carro) {
+                infos.innerHTML += `${k}: ${carro[k]}<br>`
+            }
+        }
+        let remover = document.createElement('button')
+        remover.id = 'botaoremover'
+        remover.textContent = 'Remover'
+        infos.insertAdjacentElement("beforeend", remover)
+        remover.onclick = () => {
+            infos.remove(parent)
         }
     }
 }
