@@ -104,15 +104,10 @@ class Account {
 
         }
     }
-
 }
 
-
 function account_open() {
-    let iframe = document.createElement('iframe')
-    iframe.href = 'iframe.html'
-    iframe.name = 'frame'
-
+    let main = document.querySelector('main')
     let owner = document.querySelector('#ownerc').value
     let num_account = document.querySelector('#numc').value
     let type_account = document.querySelector('#typec').value
@@ -126,7 +121,7 @@ function account_open() {
         document.querySelector('#account_op').remove()
 
         let change_datas = document.createElement('div')
-        iframe.appendChild(change_datas)
+        main.appendChild(change_datas)
         change_datas.textContent = 'Change Datas'
         change_datas.className = 'id_changedatas'
 
@@ -189,14 +184,13 @@ function account_open() {
         }) 
 
         let view_informations = document.createElement('div')
-        iframe.appendChild(view_informations)
+        main.appendChild(view_informations)
         view_informations.textContent = 'View Informations of account'
 
             let sale_children = document.createElement('div')
             let type_children = document.createElement('div')
             let num_children = document.createElement('div')
             let owner_children = document.createElement('div')
-
 
         view_informations.addEventListener('click', () => {
             sale_children.innerHTML = ''
@@ -210,7 +204,6 @@ function account_open() {
             num_children.innerHTML = ''
             num_children.innerHTML = `Number's ID of your account: ${account.getNumbconta}`
             view_informations.after(num_children)
-
 
             owner_children.innerHTML = ''
             owner_children.innerHTML = `Owner of account: ${account.getOwner}`

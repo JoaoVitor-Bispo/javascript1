@@ -44,8 +44,6 @@ tipo[1].addEventListener('click', () => {
     muniçao.setAttribute ('disabled', 'disabled')
 })
 
-
-
 function adicionar() {
     let infos = document.createElement('p')
     infos.id = 'paragfilho'
