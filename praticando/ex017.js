@@ -7,3 +7,8 @@ console.log(af(10));
 const afn = () => console.log('test')
 console.log(afn())
 
+const afb = (a,b) => {
+    let res = a + b
+    return res
+}
+console.log(afb(10,10))

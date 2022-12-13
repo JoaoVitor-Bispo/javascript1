@@ -5,7 +5,6 @@ while (true) {
         console.log(controlador)
         console.log('Ainda não chegou em 10')
         controlador += 1
-        continue
     }
     else {
         console.log(controlador)

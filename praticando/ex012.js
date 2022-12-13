@@ -14,3 +14,14 @@ function contador(i,f,p) {
     }
 }
 contador(12,-10,7)
+
+// const soma = (...val) => {
+//     let res = 5
+//     for (v of val) {
+//         res += v
+//     }
+//     return res
+// }
+
+// let valores = [1,5,3,2,6]
+// console.log(soma(valores))
