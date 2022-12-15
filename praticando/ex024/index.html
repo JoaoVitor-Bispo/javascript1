@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 0px;
+            margin: 0px;
+        }
+        #container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+
+        }
+        .box {
+            width: 350px;
+            height: 80vh;
+            margin-top: 60px;
+            display: inline-block;
+            border: 3px solid black;
+            text-align: center;
+            vertical-align: auto;
+        }
+        .button {
+            background-color: blue;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+            flex-basis: 150px;
+            align-self: center;
+            border-radius: 10px;
+        }
+        #c1 {
+            margin-right: 50px;
+        }
+        #c2 {
+            margin-left: 50px;
+        }
+        .elements {
+            background-color: lightgray;
+            width: 70%;
+            margin: 10px auto;
+            padding: 10px 0px;
+            border: 3px solid gray;
+            border-radius: 10px;
+        }
+        .elements:hover {
+            cursor: pointer;
+        }
+        .selected {
+            background-color: red;
+            border: 3px solid rgb(139, 0, 0);
+        }
+    </style>
+
+</head>
+<body>
+    <div id="container">
+        <div class="box" id="c1">
+            <div class="elements">MUSTANG</div>
+            <div class="elements">ALFA ROMEO</div>
+            <div class="elements">BMW</div>
+            <div class="elements">LAMBORGHINI</div>
+            <div class="elements">FERRARI</div>
+            <div class="elements">CORVETTE</div>
+        </div>
+        <div id="button1" class="button"><= Transfer =></div>
+        <div class="box" id="c2"></div>
+    </div>
+
+    <script src="ex.024.js"></script>
+</body>
+</html>
