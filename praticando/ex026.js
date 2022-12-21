@@ -29,3 +29,14 @@ console.log(numsduplicatd)
 //     }
 // })
 // console.log(menor_10)
+
+// let array = [1,5,3,2,6,9,7,8]
+
+// const elementfind = array.filter((element, index, array) => {
+//     if (element > 3) {
+//         console.log(element, index)
+//     }
+//     return element > 3
+
+// })
+// console.log(elementfind)

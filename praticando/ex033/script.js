@@ -6,8 +6,8 @@ const elementsarray = [6,8,17,10,7,8,9,6,15,12]
 array.innerHTML = "["+elementsarray+"]"
 
 verify.addEventListener('click', () => {
-    const ret = elementsarray.every((el,i) => {
-            return el > 5
+    const ret = elementsarray.some((el,i) => {
+            return el < 5
     })    
     if (ret) {
         result.innerHTML = `Array todo OK`
