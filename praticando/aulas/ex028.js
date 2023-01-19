@@ -6,5 +6,4 @@ const elementfind = array.find((element, index) => {
         return element
     }
 })
-elementfind
 console.log(elementfind)
