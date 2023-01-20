@@ -6,20 +6,21 @@ const getUserVideos = (email, callback) => {
 }
 
 const getVideoDetails = (video, callback) => {
-    callback({details: 'video title'});
+    setTimeout(() => {
+        callback({video, details: 'video title'});
+    }, 2500)
 }
 
 const loginUser = (email, password, callback, onError, userLogged) => {
     const error = false;
     setTimeout(() => {
-        if (error) {
-            onError('Login not was executed');
+        if (!error) {
+            callback({email, password});
         }
         else {
-            console.log(email + ' Logged');
-            callback({email});
+            console.log('Login not was executed')
         }
-    }, 2000);
+    }, 1500);
 }
 
 
@@ -27,6 +28,7 @@ const user = loginUser('Jaozada@gmail.com', '12345',
 (user) => {
     console.log({user})
     getUserVideos(user.email, (videos) => {
+        console.log({videos})
         getVideoDetails(videos[0], (details) => {
             console.log(details);
         });
