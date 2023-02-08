@@ -1,0 +1,21 @@
+{
+  "name": "javascript1",
+  "version": "1.0.0",
+  "description": "Curso de Javascript CursoEmVideo",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoaoVitor-Bispo/javascript1.git"
+  },
+  "keywords": [],
+  "author": "João Vitor Bispo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JoaoVitor-Bispo/javascript1/issues"
+  },
+  "homepage": "https://github.com/JoaoVitor-Bispo/javascript1#readme"
+}
