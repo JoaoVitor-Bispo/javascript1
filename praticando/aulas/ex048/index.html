@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #dashboard {
+            background-color: lightgray;
+            padding: 15px;
+            text-align: center;
+        }
+        .button {
+            background-color: darkgray;
+            padding: 10px;
+            border: none;
+        }
+        .button:hover {
+            background-color: rgb(138, 136, 136);
+        }
+        #stop {
+            margin-right: 15px;
+        }
+        #player {
+            background-color: red;
+            width: 60px;
+            height: 60px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div id="dashboard">
+        <button id=stop class="button">stop</button>
+        <button id="left" class="button">←</button>
+        <button id="right" class="button">→</button>
+    </div>
+    <div id="player"></div>
+    <script src="ex048.js"></script>
+</body>
+</html>
