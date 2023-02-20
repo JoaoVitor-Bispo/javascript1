@@ -37,3 +37,6 @@ button:hover {
     margin-top: 35px;
 
 }
+.ball {
+    border-radius: 90%;
+}
