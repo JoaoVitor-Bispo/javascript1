@@ -32,3 +32,6 @@ const person = {
 // localStorage.setItem('person', person)
 
 localStorage.setItem('person', JSON.stringify(person))
+
+const personObject = JSON.parse(localStorage.getItem('person'))
+console.log(person.name)
