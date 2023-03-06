@@ -94,8 +94,8 @@ function newComment(param) {
         const title = document.createElement('h3');
         const body = document.createElement('p');
 
-        title.innerHTML = data.email
-        body.innerHTML = data.body
+        title.innerHTML = data.email;
+        body.innerHTML = data.body;
 
         areaComments.appendChild(title);
         areaComments.appendChild(body);
