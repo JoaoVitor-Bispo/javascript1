@@ -5,9 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
+  <main>           
+    <div id="container-input">
+            <h1>Digite a localização</h1>
+            <input type="text" placeholder="Digite o nome da cidade" id="city-name" required>
+            <button id="search">
+                <i class="material-icons-outlined">search</i>
+            </button>
+    </div>
+    <hr>
+    <div id="datas" class="hide">
+        <h2>
+          <i class="material-icons-outlined">location_on</i>
+            <span id="city">Maceió</span>
+            <img src="https://flagsapi.com/BR/shiny/64.png" id="country"></img>
+        </h2>
+        <p id="temperature">
+            <span></span>
+            30°C
+        </p>
+        <div id="desc-container">
+          <p id="description">Nublado</p>
+          <img id="weather-icon" src="" alt="Condições atuais">
+        </div>
+        <div id="details-container">
+          <p id="umidity"><i id="water_drop" class="material-icons-outlined">water_drop</i></p>
+          <p id="wind">
+            <i class="fa-solid fa-wind"></i>
+            <span></span>
+          </p>
+        </div>
+      </div>
+      <div id="error-message" class="hide">
+        <p>Não foi possível encontrar o clima de uma cidade com este nome.</p>
+      </div>
+      <div id="loader" class="hide">
+        <i class="fa-solid fa-spinner"></i>
+      </div>
+  </main>
     <script src="script.js"></script>
 </body>
 </html>
