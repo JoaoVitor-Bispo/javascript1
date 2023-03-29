@@ -1,5 +1,5 @@
 body {
-    height: 95.3vh;
+    height: 90.6vh;
     background-image: linear-gradient(#5E53EF, #678DC0, #84b4f3);
     background-size: cover;
     background-repeat: no-repeat;
@@ -8,9 +8,12 @@ main {
     background-color: #5C54ED;
     color: white;
     width: 400px;
-    margin: 200px auto auto auto;
-    text-align: center;
     padding: 10px;
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px black;
+    text-align: center;
 }
 #city-name {
     font-size: 15px;
@@ -33,8 +36,35 @@ main {
 }
 #country {
     height: 50px;
-    transform: translateY(17px);
+    transform: translateY(15px);
 }
 .hide {
     display: none;
+}
+#desc-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+}
+#weather-icon {
+    margin-left: -34px;
+}
+#details-container {
+    display: flex;
+    justify-content: center;
+}
+#wind {
+    margin-top: 16px;
+}
+#water_drop {
+    margin-top: 14px;
+}
+hr {
+    width: 350px;
+    margin-top: 18px;
+}
+#hr2 {
+    margin: 0px 30px;
+    width: 0px;
+    size: 150px;
 }
