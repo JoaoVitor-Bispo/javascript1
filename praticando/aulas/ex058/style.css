@@ -56,7 +56,7 @@ main {
 #wind {
     margin-top: 16px;
 }
-#water_drop {
+#water_drop, #wind-power {
     margin-top: 14px;
 }
 hr {
