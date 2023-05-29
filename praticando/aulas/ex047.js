@@ -9,7 +9,10 @@ const archives = [
 ]
 
 // const regEx = /.jpeg|jpg/gi
+const string = 'aaa.jpeg-'
 const regEx = /.jpe?g/gi
+
+console.log(string.match(regEx))
 
 for (let archive of archives) {
     console.log(archive, archive.match(regEx))

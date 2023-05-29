@@ -9,28 +9,28 @@
 
 
 
-const pokemons = [
-    {
-        name: "pikachu",
-        type: "eletric"
-    },
-    {
-        name: "Squirtle",
-        type: "Water"
-    },
-    {
-    name: "Charizard",
-    type: "fire"
-    }
-];
+// const pokemons = [
+//     {
+//         name: "pikachu",
+//         type: "eletric"
+//     },
+//     {
+//         name: "Squirtle",
+//         type: "Water"
+//     },
+//     {
+//     name: "Charizard",
+//     type: "fire"
+//     }
+// ];
 
-const reduce = pokemons.reduce((ant, pos) => {
-    ant[pos.type] = ant[pos.type] || [];
-    ant[pos.type].push(pos)
-    return ant
-}, {});
+// const reduce = pokemons.reduce((ant, pos) => {
+//     ant[pos.type] = ant[pos.type] || [];
+//     ant[pos.type].push(pos)
+//     return ant
+// }, {});
 
-console.log(reduce);
+// console.log(reduce);
 
 // const nums = [50,48,4,9,4,13,7,16,13]
 
