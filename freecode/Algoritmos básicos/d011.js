@@ -1,19 +1,21 @@
 function titleCase(str) {
+
     str = str.toLowerCase();
-    const split = str.split(' ');
-    const array = [];
+
+    let split = str.split(' ');
+    let array = [];
     
     for(let c in split) {
         array.push(split[c]);
     };
     
+    array = array.map((element, index) => element.toUpperCase());
 
     for(let c in array) {
-        array[c].charAt(0).toUpperCase()
-        console.log(array)
+        split[c] = split[c].replace(split[c][0], array[c][0]);
     };
-    console.log(array)
-    return str;
+
+    return split.join(' ');
   }
   
-  titleCase("sHoRt AnD sToUt");
+cotitleCase("sHoRt AnD sToUt");

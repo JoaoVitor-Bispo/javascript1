@@ -28,6 +28,7 @@ function chunkArrayInGroups(arr, size) {
         newArr[index].push(arr[c]);
         c++;
     };
+    
     console.log(newArr);
     return newArr;
 };
