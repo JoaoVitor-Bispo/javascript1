@@ -16,7 +16,6 @@ function destroyer(arr, ...nums) {
             newArr.push(arr[c]);
         };
     };
-
     return newArr;
 }
   

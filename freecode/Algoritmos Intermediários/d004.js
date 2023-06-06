@@ -1,12 +1,11 @@
 function whatIsInAName(collection, ...source) {
     const iterator = collection.filter((element, index) => {
-        let arrayObj = Object.entries(element)
-        return element == source.map((value, key) => {
-            let entries = Object.entries(value)
-            console.log(arrayObj)
+        return source.map((value, key) => {
+            console.log(Object.keys(value))
+            return value
         })
     });
-
+    console.log(iterator)
     // return iterator;
 }
 
