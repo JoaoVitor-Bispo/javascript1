@@ -5,6 +5,7 @@ function myReplace(str, before, after) {
             corte[c] = after
         }
     }
+    console.log(spinalCase(str))
     return corte.join(' ');
 }
   
