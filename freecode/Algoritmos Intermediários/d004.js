@@ -1,6 +1,19 @@
 function whatIsInAName(collection, ...source) {
-    return iterator;
+    const newArr = [];
+    collection.map((element, index) => {
+        source.map((value, key) => {
+            for(let c in element) {
+                for(let i in value) {
+                    console.log(element[c].charAt(source[i]));
+                };
+            };
+            return source;
+        });
+        return element;
+    });
+    console.log(newArr);
+    return newArr;
 };
 
-whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" });
+whatIsInAName([{"a": 1, "b": 2, "c": 3, "d": 9999}], {"a": 1, "b": 9999, "c": 3});
 
