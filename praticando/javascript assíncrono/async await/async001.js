@@ -17,7 +17,7 @@ const testAsync = async () => {
 };
 
 
-const getUserVideos = async(email) => {
+const getUserVideos = (email) => {
         return new Promise((resolve, reject) => {
             setTimeout(() => {
                 resolve({ email : {videos: ['video1', 'video2', 'video3']}})

@@ -1,19 +1,14 @@
-function whatIsInAName(collection, ...source) {
-    const newArr = [];
-    collection.map((element, index) => {
-        source.map((value, key) => {
-            for(let c in element) {
-                for(let i in value) {
-                    console.log(element[c].charAt(source[i]));
-                };
-            };
-            return source;
-        });
-        return element;
-    });
-    console.log(newArr);
-    return newArr;
+function whatIsInAName(collection, source) {
+
+    const filteredObjects = []
+
+    collection.forEach(element => {
+        for(let c in element) console.log(element[c], source[c])
+    })
+    
+    // console.log(filteredObjects)
+    return filteredObjects
+    
 };
 
-whatIsInAName([{"a": 1, "b": 2, "c": 3, "d": 9999}], {"a": 1, "b": 9999, "c": 3});
-
+whatIsInAName([{ "apple": 1, "bat": 2 }, { "apple": 1 }, { "apple": 1, "bat": 2, "cookie": 2 }], { "apple": 1, "cookie": 2 })
